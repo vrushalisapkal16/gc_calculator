@@ -8,6 +8,12 @@ int main() {
     int gc_count = 0;
 
     for (char base : seq) {
+        for (char base : seq) {
+    if (base != 'A' && base != 'T' && base != 'G' && base != 'C' && base != 'N') {
+        cerr << "Warning: Non-canonical DNA character detected: " << base << endl;
+        continue;
+      
+}
         if (base == 'G' || base == 'C') {
             gc_count++;
         }
